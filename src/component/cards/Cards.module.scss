@@ -1,0 +1,205 @@
+/* .cardForm{
+    background-color: rgb(136, 181, 215);
+} */
+.cardForm{
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    width: 340px;
+    height: 700px;    
+}
+.textForm{
+    border-radius: 6px; 
+    background: rgb(233, 233, 233);
+    display: flex; 
+    flex-direction: column;
+    gap:12px;
+    /* height: 432px; */
+    padding: 20px;
+    font-family: 'IBM Plex Sans';
+
+}
+.cardHead{
+    display: flex;    
+}
+
+
+.clientBlock{
+    display: flex;
+    flex-direction: column;
+    gap:3px;
+}
+
+.clientButton{
+    width: 35px;
+    height: 35px;    
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color:rgb(233, 233, 233) ;
+}
+
+.topButton{
+    background-image: url('src/assets/icon/Top.png');  
+}
+
+.warrantyButton{
+    background-image: url('src/assets/icon/warranty.png');  
+}
+
+.discountButton{
+    background-image: url('src/assets/icon/discount.png');  
+}
+
+.presentButton{
+    background-image: url('src/assets/icon/present.png');  
+}
+.hitButton{
+    background-image: url('src/assets/icon/hit.png');  
+}
+.productImageBlock{
+    width: 300px;  
+    text-align: center;
+   
+}
+.productImage{
+    height: 268px;
+    width: 149px;
+    align-items: center;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('src/assets/fonts/IBMPlexSans-Regular.ttf');
+  }
+
+.productSpecifications{  
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    }
+
+
+
+.productRating{   
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.numberReviews{   
+    font-size: 12px;
+    font-weight: 400;   
+    padding-bottom: 4px;
+}
+.productType{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    gap: 10px;
+}
+.productTypeItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.productPrice{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.fistPrice{
+color: rgb(136, 136, 136);
+font-size: 20px;
+font-weight: 500;
+text-decoration-line: line-through;
+}
+
+.mainPrice{
+
+font-size: 26px;
+font-weight: 500;
+}
+
+
+.productCart{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    
+}
+
+
+.productQuantityBlock{
+    display: flex;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: center;
+    gap:22px;
+    width: 99px;
+    height: 44px;
+    border-radius: 4px;
+}
+
+.quantityButton{
+    background: rgb(255, 255, 255);
+    border-style: none;  
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+
+.quantityProduct{
+    border-style: none;
+    width: 9px;
+    height: 20px;
+}
+.minusButton{
+    background-image: url('src/assets/icon/minus.png');  
+    background-size: cover;
+}
+.plusButton{
+    background-image: url('src/assets/icon/plus.png'); 
+    background-size: cover;
+}
+
+/* .cartButtonBlock{
+    border-radius: 10px;
+    background: rgb(228, 29, 27);
+} */
+.cartButton{
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgb(228, 29, 27);
+    width: 143px;
+    height: 44px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 500;
+    border-style: none;
+}
+
+.likeButton{
+    background-image: url('src/assets/icon/like.png');
+    background-size: contain;
+    height: 28px;
+    width: 28px;   
+    border: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+
+.oneClickButton{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    box-sizing: border-box;
+    border: 1px solid rgb(136, 136, 136);
+    border-radius: 10px;
+    width: 300px;
+    height: 44px;
+}
