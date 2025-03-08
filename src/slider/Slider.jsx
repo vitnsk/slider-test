@@ -44,20 +44,12 @@ function Slider() {
       }
     }
   };
-  console.log("count1=");
-  console.log(count);
+  
   useEffect(() => {
     moveSlide();
   }, [count]);
 
-  console.log("count=");
-  console.log(count);
-  console.log("startSlide=");
-  console.log(startSlide);
-  console.log("endSlide=");
-  console.log(startSlide + numSlide);
-
-  const itemsSlides = itemsData.slice(startSlide, startSlide + numSlide);
+ const itemsSlides = itemsData.slice(startSlide, startSlide + numSlide);
 
   return (
     <>
@@ -81,8 +73,6 @@ function Slider() {
 
         <ArrowButton chosenSlide={moveSlide} />
       </div>
-
-     
     </>
   );
 }

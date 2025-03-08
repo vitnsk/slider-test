@@ -14,6 +14,6 @@ const useMedia = (query) => {
   }, [matches, query]);
 
   return matches;
-}
+};
 
 export default useMedia;

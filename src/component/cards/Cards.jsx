@@ -33,7 +33,7 @@ function Cards(item) {
           </div>
           <div className={styles.productImageBlock}>
             <img
-              //src='src\assets\img\tires70.png'
+             
              src={item.img_product}
               className={styles.productImage}
               alt='Tires img'
