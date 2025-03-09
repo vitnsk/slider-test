@@ -8,28 +8,57 @@ import styles from "./Slider.module.css";
 function Slider() {
   const [count, setCount] = useState(0);
   const [startSlide, setStartSlide] = useState(0);
-
-  const isDesktop_1920 = useMedia("(min-width: 1920px)");
-  const isDesktop_1024 = useMedia("(min-width: 1024px)");
-  const isDesktop_480 = useMedia("(min-width: 480px)");
-  const isDesktop_320 = useMedia("(min-width: 320px)");
+  const [allSlides, setAllSlides] = useState(true);
 
   let numSlide;
+  let tp;
+  const isDesktop_1920 = useMedia("(min-width: 1920px)");
+  const isDesktop_1025 = useMedia("(min-width: 1025px)");
+  const isDesktop_481 = useMedia("(min-width: 481px)");
+  const isDesktop_321 = useMedia("(min-width: 321px)");
 
-  if (isDesktop_1920) {
-    numSlide = 5;
-  } else if (isDesktop_1024) {
-    numSlide = 4;
-  } else if (isDesktop_480) {
-    numSlide = 3;
-  } else if (isDesktop_320) {
-    numSlide = 2;
+  if (!allSlides) {  
+    numSlide = itemsData.length;
+    tp=true;
   } else {
-    numSlide = 1;
+    if (isDesktop_1920) {
+      numSlide = 5;
+    } else if (isDesktop_1025) {
+      numSlide = 4;
+    } else if (isDesktop_481) {
+      numSlide = 3;
+    } else if (isDesktop_321) {
+      numSlide = 2;
+    } else {
+      numSlide = 1;
+    }
   }
+
+  // const isDesktop_1920 = useMedia("(min-width: 1920px)");
+  // const isDesktop_1440 = useMedia("(min-width: 1440px)");
+  // const isDesktop_1024 = useMedia("(min-width: 1024px)");
+  // const isDesktop_480 = useMedia("(min-width: 480px)");
+
+  // if (!allSlides) {
+  //   numSlide = itemsData.length;
+  // } else {
+  //   if (isDesktop_1920) {
+  //     numSlide = 5;
+  //   } else if (isDesktop_1440) {
+  //     numSlide = 4;
+  //   } else if (isDesktop_1024) {
+  //     numSlide = 3;
+  //   } else if (isDesktop_480) {
+  //     numSlide = 2;
+  //   } else {
+  //     numSlide = 1;
+  //   }
+  // }
+
 
   const moveSlide = (num) => {
     setCount(num);
+    if(!tp){
     if (count == -1) {
       if (startSlide > 0) {
         setStartSlide(startSlide - 1);
@@ -43,18 +72,22 @@ function Slider() {
         setStartSlide(itemsData.length - numSlide);
       }
     }
+  }
+  else{
+    setStartSlide(false);
+  }
   };
-  
+
   useEffect(() => {
     moveSlide();
-  }, [count]);
+  });
 
- const itemsSlides = itemsData.slice(startSlide, startSlide + numSlide);
+  const itemsSlides = itemsData.slice(startSlide, startSlide + numSlide);
 
   return (
     <>
       <div className={styles.sliderMain}>
-        <div className={styles.sliderTitle}>Хиты продаж</div>
+        <div className={`${styles.sliderTitle} ${styles.sliderTitleMedia}`}>Хиты продаж</div>
         <div className={styles.cardsList}>
           {itemsSlides.map((item, index) => (
             <Cards
@@ -71,7 +104,19 @@ function Slider() {
           ))}
         </div>
 
-        <ArrowButton chosenSlide={moveSlide} />
+        <div className={styles.slideMoveButtons}>
+          <ArrowButton
+            chosenSlide={moveSlide}
+            className={styles.arrowsButtonsBlock}
+          />
+          <div className={styles.blockButton}></div>
+          <button
+            onClick={() => setAllSlides(!allSlides)}
+            className={`${styles.lookAllButton} ${styles.lookAllButtonMedia}`}
+          >
+            {allSlides ? "Смотреть все" : "Сброс"}
+          </button>
+        </div>
       </div>
     </>
   );
