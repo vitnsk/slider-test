@@ -1,9 +1,3 @@
-@media screen and (min-width: 1920px)  {
-.sliderMain{    
-margin-left: 12%;
-}
-}
-
 .sliderTitle{
 color: rgb(58, 58, 58);
 font-family: IBM Plex Sans;
@@ -21,7 +15,7 @@ text-transform: uppercase;
     gap: 10px;
     margin-left: 10px;
     margin-top: 40px;
-   
+   margin-bottom: 20px;
 }
 .styles.slideButtons{
 width: 70%;
@@ -30,8 +24,7 @@ width: 70%;
     display: flex;
     text-align: center;
     align-items: center;
-    flex-wrap: nowrap;
-   
+    flex-wrap: nowrap;   
 }
 
 .blockButton{
@@ -61,8 +54,7 @@ width: 70%;
     .blockButton{
         width: 680px;
         flex: none
-    }
-    
+    }    
 }
 
 @media screen and (max-width: 480px)  {
@@ -84,6 +76,11 @@ width: 70%;
         .blockButton{
             width: 80px;
             flex: none
-        }
-        
+        }        
     }
+
+    @media screen and (min-width: 1920px)  {
+        .sliderMain{    
+        margin-left: 12%;
+        }
+     }

@@ -1,5 +1,5 @@
 
-import styles from "./ArrowButton.module.css";
+import styles from "./ArrowButton.module.scss";
 
 function ArrowButton({ chosenSlide }) {
   return (

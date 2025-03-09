@@ -3,7 +3,7 @@ import Cards from "../component/cards/Cards";
 import ArrowButton from "../component/arrowButton/ArrowButton";
 import { itemsData } from "../cardData/CardData";
 import useMedia from "../hooks/useMedia";
-import styles from "./Slider.module.css";
+import styles from "./Slider.module.scss";
 
 function Slider() {
   const [count, setCount] = useState(0);
@@ -95,7 +95,7 @@ function Slider() {
               key={index}
               idnum={item.idnum}
               img_product={item.img_product}
-              specification={item.specifications}
+              specifications={item.specifications}
               star_rating={item.star_rating}
               reviews={item.reviews}
               price_1={item.price_1}
