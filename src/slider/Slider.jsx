@@ -9,7 +9,7 @@ function Slider() {
   const [count, setCount] = useState(0);
   const [startSlide, setStartSlide] = useState(0);
   const [allSlides, setAllSlides] = useState(true);
-
+ 
   let numSlide;
   let tp;
   const isDesktop_1920 = useMedia("(min-width: 1920px)");
@@ -33,28 +33,6 @@ function Slider() {
       numSlide = 1;
     }
   }
-
-  // const isDesktop_1920 = useMedia("(min-width: 1920px)");
-  // const isDesktop_1440 = useMedia("(min-width: 1440px)");
-  // const isDesktop_1024 = useMedia("(min-width: 1024px)");
-  // const isDesktop_480 = useMedia("(min-width: 480px)");
-
-  // if (!allSlides) {
-  //   numSlide = itemsData.length;
-  // } else {
-  //   if (isDesktop_1920) {
-  //     numSlide = 5;
-  //   } else if (isDesktop_1440) {
-  //     numSlide = 4;
-  //   } else if (isDesktop_1024) {
-  //     numSlide = 3;
-  //   } else if (isDesktop_480) {
-  //     numSlide = 2;
-  //   } else {
-  //     numSlide = 1;
-  //   }
-  // }
-
 
   const moveSlide = (num) => {
     setCount(num);
