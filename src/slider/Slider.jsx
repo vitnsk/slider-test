@@ -9,7 +9,8 @@ function Slider() {
   const [count, setCount] = useState(0);
   const [startSlide, setStartSlide] = useState(0);
   const [allSlides, setAllSlides] = useState(true);
- 
+  //const [animation, setAnimation] = useState(true);
+
   let numSlide;
   let tp;
   const isDesktop_1920 = useMedia("(min-width: 1920px)");

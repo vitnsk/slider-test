@@ -37,20 +37,33 @@
 .topButton{
     background-image: url('src/assets/icon/Top.png');  
 }
-
+.topButton:hover{
+    transform: scale(1.2); 
+}
 .warrantyButton{
     background-image: url('src/assets/icon/warranty.png');  
 }
-
+.warrantyButton:hover{
+    transform: scale(1.2); 
+}
 .discountButton{
     background-image: url('src/assets/icon/discount.png');  
+}
+.discountButton:hover{
+    transform: scale(1.2); 
 }
 
 .presentButton{
     background-image: url('src/assets/icon/present.png');  
 }
+.presentButton:hover{
+    transform: scale(1.2); 
+}
 .hitButton{
     background-image: url('src/assets/icon/hit.png');  
+}
+.hitButton:hover{
+    transform: scale(1.2); 
 }
 .productImageBlock{
     width: 300px;  
@@ -167,6 +180,13 @@ font-weight: 500;
     border-style: none;
 }
 
+.cartButton:hover{
+    background: rgb(228, 29, 27); 
+    opacity: 75%;
+    border:3px solid #a50202;
+    transform: scale(1.1); 
+}
+
 .likeButton{
     background-image: url('src/assets/icon/like.png');
     background-size: contain;
@@ -178,6 +198,9 @@ font-weight: 500;
     margin-left: 10px;
 }
 
+.likeButton:hover{
+    transform: scale(1.2); 
+}
 .oneClickButton{
     cursor: pointer;
     font-size: 15px;
@@ -187,4 +210,10 @@ font-weight: 500;
     border-radius: 10px;
     width: 300px;
     height: 44px;
+}
+
+.oneClickButton:hover{
+    background: white; 
+    border:2px solid black;
+    transform: scale(1.1); 
 }
