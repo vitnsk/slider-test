@@ -1,10 +1,30 @@
+import {useState} from "react";
 import styles from "./Cards.module.scss";
 //import {itemsData} from '../../cardData/CardData';
 
 
 function Cards(item) {
+
+  let [counter, setCounter]= useState(4);
+  let plusCounter =()=>{
+     if(counter<100)
+     {
+    setCounter(Number(counter)+1);
+   }
+  };
+  let minusCounter = () => {
+     if(counter>0)
+     {
+      setCounter(counter - 1);
+     }
+  }
+ let counterChange = (e)=>{
+   setCounter(e.target.value);
+  }
   //const itemsSlides =  itemsData.slice(1, 2);
+
   return (
+
   //
   //itemsSlides.map((item, index) => (
     <>  
@@ -102,12 +122,14 @@ function Cards(item) {
             <div className={styles.productQuantityBlock}>
               <button
                 className={`${styles.minusButton} ${styles.quantityButton}`}
-              >
+                type="button" onClick={minusCounter}
+             >
                 
               </button>
-              <input className={styles.quantityProduct} type='text' value='4' />
+              <input className={styles.quantityProduct} value={counter} onChange={counterChange} />
               <button
                 className={`${styles.plusButton} ${styles.quantityButton}`}
+                type="button" onClick={plusCounter}
               >
                 
               </button>
