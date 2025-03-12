@@ -1,6 +1,6 @@
 import img_0 from '../assets/img/tires70.png'
 import img_1 from '../assets/img/tires 71.png'
-import img_star from '../assets/icon/rating.png'
+import img_star from '../assets/icon/stars.svg'
 
    export const itemsData = [
     {

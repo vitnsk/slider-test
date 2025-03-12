@@ -24,47 +24,36 @@
     gap:3px;
 }
 
-.clientButton{
+.goodsIcon{
     width: 35px;
     height: 35px;    
     background-size: cover;
-    border: none;
-    cursor: pointer;
+    border: none;  
     border-radius: 50%;
     background-color:rgb(233, 233, 233) ;
 }
 
-.topButton{
-    background-image: url('src/assets/icon/Top.png');  
-}
-.topButton:hover{
-    transform: scale(1.2); 
-}
-.warrantyButton{
-    background-image: url('src/assets/icon/warranty.png');  
-}
-.warrantyButton:hover{
-    transform: scale(1.2); 
-}
-.discountButton{
-    background-image: url('src/assets/icon/discount.png');  
-}
-.discountButton:hover{
-    transform: scale(1.2); 
+.topIcon{
+    background-image: url('src/assets/icon/top.svg');  
 }
 
-.presentButton{
-    background-image: url('src/assets/icon/present.png');  
+.warrantyIcon{
+    background-image: url('src/assets/icon/warranty.svg');  
 }
-.presentButton:hover{
-    transform: scale(1.2); 
+
+.discountIcon{
+    background-image: url('src/assets/icon/discount.svg');  
 }
-.hitButton{
-    background-image: url('src/assets/icon/hit.png');  
+
+
+.presentIcon{
+    background-image: url('src/assets/icon/present.svg');  
 }
-.hitButton:hover{
-    transform: scale(1.2); 
+
+.hitIcon{
+    background-image: url('src/assets/icon/hit.svg');  
 }
+
 .productImageBlock{
     width: 300px;  
     text-align: center;
@@ -160,12 +149,12 @@ font-weight: 500;
     height: 20px;
 }
 .minusButton{
-    background-image: url('src/assets/icon/minus.png');  
+    background-image: url('src/assets/icon/minus.svg');  
     background-size: cover;
 }
 
 .plusButton{
-    background-image: url('src/assets/icon/plus.png'); 
+    background-image: url('src/assets/icon/plus.svg'); 
     background-size: cover;
 }
 
@@ -189,7 +178,7 @@ font-weight: 500;
 }
 
 .likeButton{
-    background-image: url('src/assets/icon/like.png');
+    background-image: url('src/assets/icon/like.svg');
     background-size: contain;
     height: 28px;
     width: 28px;   

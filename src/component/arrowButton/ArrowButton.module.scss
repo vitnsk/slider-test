@@ -14,15 +14,20 @@
     cursor: pointer;
     border-radius: 50%;
     background-color:rgb(233, 233, 233) ;
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center center;
+    border-radius: 50%; 
+}
+.arrowsButtons:hover{ 
+    background-color: rgb(200, 200, 200) ;
+    border: 2px solid  rgb(150, 150, 150) ;   
 }
 
 .arrowButtonLeft{    
-    background-image: url('src/assets/icon/left.png');  
-    background-size: cover;  
-   
+    background-image: url('src/assets/icon/left.svg');    
 }
 
-.arrowButtonRight{    
-    background-image: url('src/assets/icon/right.png');  
-    background-size: cover;  
+.arrowButtonRight{
+    background-image: url('src/assets/icon/right.svg');    
 }

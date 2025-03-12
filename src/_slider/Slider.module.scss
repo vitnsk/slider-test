@@ -1,0 +1,91 @@
+.sliderTitle{
+color: rgb(58, 58, 58);
+font-family: IBM Plex Sans;
+src: url('src/assets/fonts/IBMPlexSans-Regular.ttf');
+text-transform: uppercase;
+}
+.sliderTitleMedia{
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52px;
+}
+.cardsList{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 40px;
+   margin-bottom: 20px;
+}
+.styles.slideButtons{
+width: 70%;
+}
+.slideMoveButtons{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-wrap: nowrap;   
+}
+
+.blockButton{
+    width: 1040px;
+    flex: none
+}
+.lookAllButton{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 130%;
+    cursor: pointer;
+    background: rgb(228, 29, 27);
+    border-radius: 10px;
+    border-style: none;
+    color: rgb(255, 255, 255);
+     margin-top: 40px; 
+     flex-wrap: nowrap;
+     flex: none
+}
+.lookAllButton:hover{
+    background: rgb(228, 29, 27); 
+    opacity: 75%;
+    border:3px solid #a50202;
+    transform: scale(1.1); 
+}
+.lookAllButtonMedia{
+    width: 242px;
+    height: 44px;   
+}
+
+@media screen and (max-width: 1024px) {
+    .blockButton{
+        width: 680px;
+        flex: none
+    }    
+}
+
+@media screen and (max-width: 480px)  {
+        .lookAllButtonMedia{            
+        width: 146px;
+        height: 44px;
+        }
+        .blockButton{
+        width: 420px;
+        flex: none;
+        }
+        .sliderTitleMedia{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 125%;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .blockButton{
+            width: 80px;
+            flex: none
+        }        
+    }
+
+    @media screen and (min-width: 1920px)  {
+        .sliderMain{    
+        margin-left: 12%;
+        }
+     }

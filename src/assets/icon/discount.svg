@@ -1,0 +1,17 @@
+<svg width="35.000000" height="35.000000" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip47_4074">
+			<rect id="Frame 81742187" rx="0.000000" width="23.000000" height="23.000143" transform="translate(6.000000 6.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="скидка" rx="0.000000" width="34.000000" height="34.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<circle id="Ellipse 69" cx="17.500000" cy="17.500000" r="17.500000" fill="#E9E9E9" fill-opacity="1.000000"/>
+	<g clip-path="url(#clip47_4074)">
+		<circle id="Ellipse 71" cx="12.500000" cy="11.875000" r="2.200000" stroke="#AFAFAF" stroke-opacity="1.000000" stroke-width="1.600000"/>
+		<circle id="Ellipse 72" cx="22.500000" cy="21.875000" r="2.200000" stroke="#AFAFAF" stroke-opacity="1.000000" stroke-width="1.600000"/>
+		<line id="Line 4" x1="23.658203" y1="9.389282" x2="10.802734" y2="24.710205" stroke="#AFAFAF" stroke-opacity="1.000000" stroke-width="1.600000"/>
+	</g>
+</svg>

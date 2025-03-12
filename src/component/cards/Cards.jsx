@@ -35,21 +35,21 @@ function Cards(item) {
             </div>
         <div className={styles.cardHead}>
           <div className={styles.clientBlock}>
-            <button
-              className={`${styles.topButton} ${styles.clientButton}`}
-            ></button>
-            <button
-              className={`${styles.warrantyButton} ${styles.clientButton}`}
-            ></button>
-            <button
-              className={`${styles.discountButton} ${styles.clientButton}`}
-            ></button>
-            <button
-              className={`${styles.presentButton} ${styles.clientButton}`}
-            ></button>
-            <button
-              className={`${styles.hitButton} ${styles.clientButton}`}
-            ></button>
+            <div
+              className={`${styles.topIcon} ${styles.goodsIcon}`}
+            ></div>
+            <div
+              className={`${styles.warrantyIcon} ${styles.goodsIcon}`}
+            ></div>
+            <div
+              className={`${styles.discountIcon} ${styles.goodsIcon}`}
+            ></div>
+            <div
+              className={`${styles.presentIcon} ${styles.goodsIcon}`}
+            ></div>
+            <div
+              className={`${styles.hitIcon} ${styles.goodsIcon}`}
+            ></div>
           </div>
           <div className={styles.productImageBlock}>
             <img
@@ -84,7 +84,7 @@ function Cards(item) {
             <div className={styles.productType}>
               <div className= {`${styles.seasonType} ${styles.productTypeItem}`}>
                 <img
-                  src='src\assets\icon\winter.png'
+                  src='src\assets\icon\winter.svg'
                   className={styles.winterImage}
                   alt='Winter img'
                 />
@@ -93,7 +93,7 @@ function Cards(item) {
 
               <div className={`${styles.spikeType} ${styles.productTypeItem}`}>
                 <img
-                  src='src\assets\icon\spike.png'
+                  src='src\assets\icon\spike.svg'
                   className={styles.spikeImage}
                   alt='Spike img'
                 />
@@ -102,7 +102,7 @@ function Cards(item) {
 
               <div className={`${styles.dirtType} ${styles.productTypeItem}`}>
                 <img
-                  src='src\assets\icon\dirt.png'
+                  src='src\assets\icon\dirt.svg'
                   className={styles.dirtImage}
                   alt='Dirt img'
                 />
