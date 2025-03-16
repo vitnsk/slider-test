@@ -2,7 +2,11 @@
     border-radius: 12px;
     background: rgb(255, 255, 255);  
     height: 700px; 
-    box-sizing:border-box;
+    //box-sizing:border-box;
+   //width: 300px;
+   
+   padding-bottom: 30px;
+    border: rgb(39, 30, 199) solid 4px;
 }
 
 .cardsFormMedia{
@@ -23,6 +27,11 @@
   .productSpecificationsMedia{
     font-size: 14px;
   }
+  .likeButtonMedia{
+    margin-left: 5px;
+
+  }
+
 @media screen and (min-width: 480px) {
     
   .cardsFormMedia{
@@ -42,6 +51,9 @@
   }
   .productSpecificationsMedia{
     font-size: 14px;
+  }
+  .likeButtonMedia{
+    margin-left: 0;
   }
 }
   @media screen and (min-width: 768px) {
@@ -64,13 +76,16 @@
       .productSpecificationsMedia{
         font-size: 14px;
       }
+      .likeButtonMedia{
+        margin-left: 0;
+      }
   }
 
   
   
   @media screen and (min-width: 1024px) {
     
-    .cardsFormMedia{
+    .cardFormMedia{
         width: 300px;
       }
       .productRatingMedia{   
@@ -87,12 +102,15 @@
       }
       .productSpecificationsMedia{
         font-size: 18px;
+      }
+      .likeButtonMedia{
+        margin-left: 0px;
       }
   }
 
   @media screen and (min-width: 1280px) {
   
-    .cardsFormMedia{
+    .cardFormMedia{
         width: 300px;
       }
       .productRatingMedia{   
@@ -109,13 +127,16 @@
       }
       .productSpecificationsMedia{
         font-size: 18px;
+      }
+      .likeButtonMedia{
+        margin-left: 10px;
       }
   }
   
 
   @media screen and (min-width: 1440px) {
    
-    .cardsFormMedia{
+    .cardFormMedia{
         width: 340px;
       }
       .productRatingMedia{   
@@ -130,12 +151,15 @@
       .productSpecificationsMedia{
         font-size: 18px;
       }
+      .likeButtonMedia{
+        margin-left: 10px;
+      }
   }
 
   @media screen and (min-width: 1920px) {
    
-    .cardsFormMedia{
-        width: 200px;
+    .cardFormMedia{
+        width: 340px;
       }
       .productRatingMedia{   
         gap: 14px;
@@ -152,7 +176,9 @@
       .productSpecificationsMedia{
         font-size: 18px;
       }
-  
+      .likeButtonMedia{
+        margin-left: 10px;
+      }
   }
 
 .textForm{
@@ -161,12 +187,17 @@
     display: flex; 
     flex-direction: column;
     gap:12px;
-    padding: 20px;
     font-family: 'IBM Plex Sans';
-
+ //border: red solid 4px;
+// width: 200px;
+padding-top: 20px;
+padding-left: 20px;
+  padding-bottom: 20px;
 }
 .cardHead{
-    display: flex;    
+    display: flex;   
+   // border:green solid 4px; 
+  //  width: 200px;
 }
 
 .clientBlock{
@@ -339,7 +370,7 @@ font-weight: 500;
     border: none;
     cursor: pointer;
     background-repeat: no-repeat;
-    margin-left: 10px;
+    //margin-left: 10px;
 }
 
 .likeButton:hover{

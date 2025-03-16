@@ -21,12 +21,11 @@ function Cards(item) {
  let counterChange = (e)=>{
    setCounter(e.target.value);
   }
-  //const itemsSlides =  itemsData.slice(1, 2);
+ 
 
   return (
 
-  //
-  //itemsSlides.map((item, index) => (
+
     <>  
 
       <div className={`${styles.cardForm} ${styles.cardFormMedia}`}>
@@ -138,7 +137,7 @@ function Cards(item) {
               <button className={`${styles.cartButton} ${styles.cartButtonMedia}`}>В корзину</button>
             </div>
             <div className={styles.likeButtonBlock}>
-              <button className={styles.likeButton}></button>
+              <button className={`${styles.likeButton} ${styles.likeButtonMedia}`} ></button>
             </div>
           </div>
 
@@ -149,7 +148,7 @@ function Cards(item) {
       </div>
     
     </>
- // ))
+
   );
 }
 

@@ -4,7 +4,7 @@ import ArrowButton from "../component/arrowButton/ArrowButton";
 import { itemsData } from "../cardData/CardData";
 import useMedia from "../hooks/useMedia";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Grid, Navigation } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css";
 //import Swiper from 'react-id-swiper';
@@ -15,23 +15,19 @@ function Slider() {
   const [_, setInit] = useState();
   const leftRef = useRef(null);
   const rightRef = useRef(null);
-  // const [count, setCount] = useState(0);
-  // const [startSlide, setStartSlide] = useState(0);
+
   const [allSlides, setAllSlides] = useState(true);
-  // //const [animation, setAnimation] = useState(true);
-
-  // let numSlide;
+  
    let params;
-
+let sp=20;
 
   if (!allSlides) {
     params = {
 
-      slidesPerView: 7,
-
+      slidesPerView: itemsData.length,
+     
     spaceBetween: 20,
-    loop: true,
-    modules: [Navigation],
+   
 
     navigation: {
       nextEl: rightRef.current,
