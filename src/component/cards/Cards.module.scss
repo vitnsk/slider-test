@@ -1,9 +1,160 @@
 .cardForm{
     border-radius: 12px;
-    background: rgb(255, 255, 255);
-    width: 340px;
-    height: 700px;    
+    background: rgb(255, 255, 255);  
+    height: 700px; 
+    box-sizing:border-box;
 }
+
+.cardsFormMedia{
+    width: 280px;
+  }
+  .productRatingMedia{   
+    gap: 14px;
+  }
+  .productQuantityBlockMedia{
+    display: none;
+  }
+  .cartButtonMedia{
+    width: 222px;
+  }
+  .oneClickButtonMedia{
+    width: 260px;
+  }
+  .productSpecificationsMedia{
+    font-size: 14px;
+  }
+@media screen and (min-width: 480px) {
+    
+  .cardsFormMedia{
+    width: 212px;
+  }
+  .productRatingMedia{   
+    gap: 4px;
+  }
+  .productQuantityBlockMedia{
+    display: none;
+  }
+  .cartButtonMedia{
+    width: 154px;
+  }
+  .oneClickButtonMedia{
+    width: 192px;
+  }
+  .productSpecificationsMedia{
+    font-size: 14px;
+  }
+}
+  @media screen and (min-width: 768px) {
+    
+    .cardsFormMedia{
+        width: 229px;
+      }
+      .productRatingMedia{   
+        gap: 14px;
+      }
+      .productQuantityBlockMedia{
+        display: none;
+      }
+      .cartButtonMedia{
+        width: 171px;
+      }
+      .oneClickButtonMedia{
+        width: 209px;
+      }
+      .productSpecificationsMedia{
+        font-size: 14px;
+      }
+  }
+
+  
+  
+  @media screen and (min-width: 1024px) {
+    
+    .cardsFormMedia{
+        width: 300px;
+      }
+      .productRatingMedia{   
+        gap: 14px;
+      }
+      .productQuantityBlockMedia{
+        display: flex;
+      }
+      .cartButtonMedia{
+        width: 113px;
+      }
+      .oneClickButtonMedia{
+        width: 260px;
+      }
+      .productSpecificationsMedia{
+        font-size: 18px;
+      }
+  }
+
+  @media screen and (min-width: 1280px) {
+  
+    .cardsFormMedia{
+        width: 300px;
+      }
+      .productRatingMedia{   
+        gap: 14px;
+      }
+      .productQuantityBlockMedia{
+        display: flex;
+      }
+      .cartButtonMedia{
+        width: 113px;
+      }
+      .oneClickButtonMedia{
+        width: 260px;
+      }
+      .productSpecificationsMedia{
+        font-size: 18px;
+      }
+  }
+  
+
+  @media screen and (min-width: 1440px) {
+   
+    .cardsFormMedia{
+        width: 340px;
+      }
+      .productRatingMedia{   
+        gap: 14px;
+      }
+      .productQuantityBlockMedia{
+        display: flex;
+      }
+      .cartButtonMedia{
+        width: 143px;
+      }
+      .productSpecificationsMedia{
+        font-size: 18px;
+      }
+  }
+
+  @media screen and (min-width: 1920px) {
+   
+    .cardsFormMedia{
+        width: 200px;
+      }
+      .productRatingMedia{   
+        gap: 14px;
+      }
+      .productQuantityBlockMedia{
+        display: flex;
+      }
+      .cartButtonMedia{
+        width: 143px;
+      }
+      .oneClickButtonMedia{
+        width: 300px;
+      }
+      .productSpecificationsMedia{
+        font-size: 18px;
+      }
+  
+  }
+
 .textForm{
     border-radius: 6px; 
     background: rgb(233, 233, 233);
@@ -72,17 +223,20 @@
   }
 
 .productSpecifications{  
-    font-size: 18px;
+    //font-size: 18px;
     font-weight: 500;
     text-align: left;
+    line-height: 120%;
 }
 
 .productRating{   
     display: flex;
-    gap: 14px;
+   // gap: 14px;
     margin-top: 12px;
     align-items: center;
 }
+
+
 
 .numberReviews{   
     font-size: 12px;
@@ -125,7 +279,7 @@ font-weight: 500;
 }
 
 .productQuantityBlock{
-    display: flex;
+    //display: flex;
     background: rgb(255, 255, 255);
     align-items: center;
     justify-content: center;
@@ -162,7 +316,7 @@ font-weight: 500;
     cursor: pointer;
     border-radius: 10px;
     background: rgb(228, 29, 27);
-    width: 143px;
+    //width: 143px;
     height: 44px;
     color: rgb(255, 255, 255);
     font-size: 15px;
@@ -198,7 +352,7 @@ font-weight: 500;
     box-sizing: border-box;
     border: 1px solid rgb(136, 136, 136);
     border-radius: 10px;
-    width: 300px;
+   // width: 300px;
     height: 44px;
 }
 

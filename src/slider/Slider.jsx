@@ -1,93 +1,137 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Cards from "../component/cards/Cards";
 import ArrowButton from "../component/arrowButton/ArrowButton";
 import { itemsData } from "../cardData/CardData";
 import useMedia from "../hooks/useMedia";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import "swiper/css/navigation";
+import "swiper/css";
+//import Swiper from 'react-id-swiper';
+import "swiper/swiper-bundle.css";
 import styles from "./Slider.module.scss";
 
 function Slider() {
-  const [count, setCount] = useState(0);
-  const [startSlide, setStartSlide] = useState(0);
+  const [_, setInit] = useState();
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+  // const [count, setCount] = useState(0);
+  // const [startSlide, setStartSlide] = useState(0);
   const [allSlides, setAllSlides] = useState(true);
-  //const [animation, setAnimation] = useState(true);
+  // //const [animation, setAnimation] = useState(true);
 
-  let numSlide;
-  let tp;
-  const isDesktop_1920 = useMedia("(min-width: 1920px)");
-  const isDesktop_1025 = useMedia("(min-width: 1025px)");
-  const isDesktop_481 = useMedia("(min-width: 481px)");
-  const isDesktop_321 = useMedia("(min-width: 321px)");
+  // let numSlide;
+   let params;
 
-  if (!allSlides) {  
-    numSlide = itemsData.length;
-    tp=true;
-  } else {
-    if (isDesktop_1920) {
-      numSlide = 5;
-    } else if (isDesktop_1025) {
-      numSlide = 4;
-    } else if (isDesktop_481) {
-      numSlide = 3;
-    } else if (isDesktop_321) {
-      numSlide = 2;
-    } else {
-      numSlide = 1;
-    }
-  }
 
-  const moveSlide = (num) => {
-    setCount(num);
-    if(!tp){
-    if (count == -1) {
-      if (startSlide > 0) {
-        setStartSlide(startSlide - 1);
-      } else {
-        setStartSlide(0);
-      }
-    } else if (count == 1) {
-      if (startSlide + numSlide < itemsData.length) {
-        setStartSlide(startSlide + 1);
-      } else {
-        setStartSlide(itemsData.length - numSlide);
-      }
-    }
-  }
-  else{
-    setStartSlide(false);
-  }
+  if (!allSlides) {
+    params = {
+
+      slidesPerView: 7,
+
+    spaceBetween: 20,
+    loop: true,
+    modules: [Navigation],
+
+    navigation: {
+      nextEl: rightRef.current,
+      prevEl: leftRef.current,
+    },
+    onInit: () => setInit(true),
   };
+  }
+else{
+   params = {
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        width: 320,
+      },
+      480: {
+        slidesPerView: 2,
+        width: 480,
+      },
+      768: {
+        slidesPerView: 3,
+        width: 768,
+      },
+      1024: {
+        slidesPerView: 3,
+        width: 1024,
+      },
+      1280: {
+        slidesPerView: 4,
+        width: 1280,
+      },
+      1440: {
+        slidesPerView: 4,
+        width: 1440,
+      },
+      1920: {
+        slidesPerView: 5,
+        width: 1920,
+      },
+    },
 
-  useEffect(() => {
-    moveSlide();
-  });
+    centeredSlides:false,
+    spaceBetween: 20,
+    loop: true,
+    modules: [Navigation],
 
-  const itemsSlides = itemsData.slice(startSlide, startSlide + numSlide);
-
+    navigation: {
+      nextEl: rightRef.current,
+      prevEl: leftRef.current,
+    },
+    onInit: () => setInit(true),
+  };
+  }
+  // useEffect(() => {
+  //   setInit();
+  // });
   return (
     <>
-      <div className={styles.sliderMain}>
-        <div className={`${styles.sliderTitle} ${styles.sliderTitleMedia}`}>Хиты продаж</div>
+      <div className={`${styles.sliderMain} ${styles.sliderMainMedia}`}>
+        <div className={`${styles.sliderTitle} ${styles.sliderTitleMedia}`}>
+          Хиты продаж
+        </div>
         <div className={styles.cardsList}>
-          {itemsSlides.map((item, index) => (
-            <Cards
-              className={styles.cardsForm}
-              key={index}
-              idnum={item.idnum}
-              img_product={item.img_product}
-              specifications={item.specifications}
-              star_rating={item.star_rating}
-              reviews={item.reviews}
-              price_1={item.price_1}
-              price_main={item.price_main}
-            />
-          ))}
+          <Swiper
+            {...params}
+            className={`${styles.sliderSwiper} ${styles.sliderSwiperMedia}`}
+          >
+            {itemsData.map((item, index) => (
+              <SwiperSlide key={index} className={styles.swiperSlideMedia}>
+                <Cards
+                  className={styles.cardsForm}
+                  key={index}
+                  idnum={item.idnum}
+                  img_product={item.img_product}
+                  specifications={item.specifications}
+                  star_rating={item.star_rating}
+                  reviews={item.reviews}
+                  price_1={item.price_1}
+                  price_main={item.price_main}
+                />
+              </SwiperSlide>
+            ))}
+
+            {/* <ArrowButton           
+            className={styles.arrowsButtonsBlock}
+          /> */}
+          </Swiper>
         </div>
 
         <div className={styles.slideMoveButtons}>
-          <ArrowButton
-            chosenSlide={moveSlide}
-            className={styles.arrowsButtonsBlock}
-          />
+          <div className={styles.arrowsButtonsBlock}>
+            <button
+              ref={leftRef}
+              className={`${styles.arrowButtonLeft} ${styles.arrowsButtons}`}
+            ></button>
+            <button
+              ref={rightRef}
+              className={`${styles.arrowButtonRight} ${styles.arrowsButtons}`}
+            ></button>
+          </div>
           <div className={styles.blockButton}></div>
           <button
             onClick={() => setAllSlides(!allSlides)}

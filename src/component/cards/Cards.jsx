@@ -29,7 +29,7 @@ function Cards(item) {
   //itemsSlides.map((item, index) => (
     <>  
 
-      <div className={styles.cardForm}>
+      <div className={`${styles.cardForm} ${styles.cardFormMedia}`}>
       <div>              
                 {item.idnum}             
             </div>
@@ -62,12 +62,12 @@ function Cards(item) {
         </div>
         <div className={styles.textForm}>
           <div className={styles.productDescription}>
-            <div className={styles.productSpecifications}>
+            <div className= {`${styles.productSpecifications} ${styles.productSpecificationsMedia}`}>
               <span>
                 {item.specifications}              
               </span>
             </div>
-            <div className={styles.productRating}>
+            <div className= {`${styles.productRating} ${styles.productRatingMedia}`}>
               <div className={styles.starRating}>
                 <img
                   src={item.star_rating}
@@ -119,7 +119,7 @@ function Cards(item) {
           </div>
 
           <div className={styles.productCart}>
-            <div className={styles.productQuantityBlock}>
+            <div  className={`${styles.productQuantityBlock} ${styles.productQuantityBlockMedia}`} >
               <button
                 className={`${styles.minusButton} ${styles.quantityButton}`}
                 type="button" onClick={minusCounter}
@@ -135,7 +135,7 @@ function Cards(item) {
               </button>
             </div>
             <div className={styles.cartButtonBlock}>
-              <button className={styles.cartButton}>В корзину</button>
+              <button className={`${styles.cartButton} ${styles.cartButtonMedia}`}>В корзину</button>
             </div>
             <div className={styles.likeButtonBlock}>
               <button className={styles.likeButton}></button>
@@ -143,7 +143,7 @@ function Cards(item) {
           </div>
 
           <div className={styles.oneClickBlock}>
-            <button className={styles.oneClickButton}>Купить в 1 клик</button>
+            <button className={`${styles.oneClickButton} ${styles.oneClickButtonMedia}`}>Купить в 1 клик</button>
           </div>
         </div>
       </div>
