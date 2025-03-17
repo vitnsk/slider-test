@@ -64,7 +64,7 @@ function Slider() {
         <div className={`${styles.sliderTitle} ${styles.sliderTitleMedia}`}>
           Хиты продаж
         </div>
-
+        <div className={`${styles['swList']} ${allSlides ? '' : styles['swDisplay']}`}>
         <Swiper
           {...params}
           className={`${styles.sliderSwiper} ${styles.sliderSwiperMedia}`}
@@ -85,7 +85,27 @@ function Slider() {
             </SwiperSlide>
           ))}        
         </Swiper>
+          </div>
 
+          <div className={`${styles['cardsList']} ${allSlides ?  styles['swDisplay'] : ''}`}>
+            <div className={styles.cList}>
+          {itemsData.map((item, index) => (
+           
+              <Cards
+                className={styles.cardsForm}
+                key={index}
+                idnum={item.idnum}
+                img_product={item.img_product}
+                specifications={item.specifications}
+                star_rating={item.star_rating}
+                reviews={item.reviews}
+                price_1={item.price_1}
+                price_main={item.price_main}
+              />
+         
+          ))}        
+          </div>
+          </div>
         <div className={styles.slideMoveButtons}>
           <div className={styles.arrowsButtonsBlock}>
             <button
