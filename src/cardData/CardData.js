@@ -77,8 +77,6 @@ import img_star from '../assets/icon/stars.svg'
     },
   ];
 
-
-
 function CardData() {
 }
 export default CardData;

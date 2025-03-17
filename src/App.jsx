@@ -1,15 +1,14 @@
-
-import Slider from './slider/Slider';
-import './App.css';
+import Slider from "./slider/Slider";
+import "./App.css";
 
 function App() {
   return (
-    <>  
-  <div class="overflow-hidden">
-      <Slider/>
+    <>
+      <div>
+        <Slider />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

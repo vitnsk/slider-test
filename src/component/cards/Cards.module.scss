@@ -96,8 +96,6 @@
   }
 }
 
-
-
 @media screen and (min-width: 1024px) {
 
   .cardFormMedia {
@@ -130,7 +128,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-
   .cardFormMedia {
     width: 300px;
   }
@@ -162,7 +159,6 @@
 
 
 @media screen and (min-width: 1440px) {
-
   .cardFormMedia {
     width: 340px;
   }
@@ -292,7 +288,6 @@
 }
 
 .productSpecifications {
-  //font-size: 18px;
   font-weight: 500;
   text-align: left;
   line-height: 120%;
@@ -300,12 +295,9 @@
 
 .productRating {
   display: flex;
-  // gap: 14px;
   margin-top: 12px;
   align-items: center;
 }
-
-
 
 .numberReviews {
   font-size: 12px;
@@ -351,7 +343,6 @@
 }
 
 .productQuantityBlock {
-  //display: flex;
   background: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
@@ -389,7 +380,6 @@
   cursor: pointer;
   border-radius: 10px;
   background: rgb(228, 29, 27);
-  //width: 143px;
   height: 44px;
   color: rgb(255, 255, 255);
   font-size: 15px;
@@ -412,7 +402,6 @@
   border: none;
   cursor: pointer;
   background-repeat: no-repeat;
-  //margin-left: 10px;
 }
 
 .likeButton:hover {
@@ -426,7 +415,6 @@
   box-sizing: border-box;
   border: 1px solid rgb(136, 136, 136);
   border-radius: 10px;
-  // width: 300px;
   height: 44px;
 }
 

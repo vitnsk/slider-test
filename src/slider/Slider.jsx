@@ -1,43 +1,20 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import Cards from "../component/cards/Cards";
-import ArrowButton from "../component/arrowButton/ArrowButton";
 import { itemsData } from "../cardData/CardData";
-import useMedia from "../hooks/useMedia";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Grid, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css";
-//import Swiper from 'react-id-swiper';
 import "swiper/swiper-bundle.css";
 import styles from "./Slider.module.scss";
 
 function Slider() {
   const [_, setInit] = useState();
   const leftRef = useRef(null);
+  const [allSlides, setAllSlides] = useState(true);
   const rightRef = useRef(null);
 
-  const [allSlides, setAllSlides] = useState(true);
-  
-   let params;
-let sp=20;
-
-  if (!allSlides) {
-    params = {
-
-      slidesPerView: itemsData.length,
-     
-    spaceBetween: 20,
-   
-
-    navigation: {
-      nextEl: rightRef.current,
-      prevEl: leftRef.current,
-    },
-    onInit: () => setInit(true),
-  };
-  }
-else{
-   params = {
+  const params = {
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -69,7 +46,7 @@ else{
       },
     },
 
-    centeredSlides:false,
+    centeredSlides: false,
     spaceBetween: 10,
     loop: true,
     modules: [Navigation],
@@ -80,42 +57,34 @@ else{
     },
     onInit: () => setInit(true),
   };
-  }
-  // useEffect(() => {
-  //   setInit();
-  // });
+
   return (
     <>
       <div className={`${styles.sliderMain} ${styles.sliderMainMedia}`}>
         <div className={`${styles.sliderTitle} ${styles.sliderTitleMedia}`}>
           Хиты продаж
         </div>
-        {/* <div className={styles.{allSlides ? "cardsList":"cardListAll"}}> */}
-          <Swiper
-            {...params}
-            className={`${styles.sliderSwiper} ${styles.sliderSwiperMedia}`}
-          >
-            {itemsData.map((item, index) => (
-              <SwiperSlide key={index} className={styles.swiperSlideMedia}>
-                <Cards
-                  className={styles.cardsForm}
-                  key={index}
-                  idnum={item.idnum}
-                  img_product={item.img_product}
-                  specifications={item.specifications}
-                  star_rating={item.star_rating}
-                  reviews={item.reviews}
-                  price_1={item.price_1}
-                  price_main={item.price_main}
-                />
-              </SwiperSlide>
-            ))}
 
-            {/* <ArrowButton           
-            className={styles.arrowsButtonsBlock}
-          /> */}
-          </Swiper>
-        {/* </div> */}
+        <Swiper
+          {...params}
+          className={`${styles.sliderSwiper} ${styles.sliderSwiperMedia}`}
+        >
+          {itemsData.map((item, index) => (
+            <SwiperSlide key={index} className={styles.swiperSlideMedia}>
+              <Cards
+                className={styles.cardsForm}
+                key={index}
+                idnum={item.idnum}
+                img_product={item.img_product}
+                specifications={item.specifications}
+                star_rating={item.star_rating}
+                reviews={item.reviews}
+                price_1={item.price_1}
+                price_main={item.price_main}
+              />
+            </SwiperSlide>
+          ))}        
+        </Swiper>
 
         <div className={styles.slideMoveButtons}>
           <div className={styles.arrowsButtonsBlock}>
