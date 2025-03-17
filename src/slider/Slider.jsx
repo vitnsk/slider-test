@@ -70,7 +70,7 @@ else{
     },
 
     centeredSlides:false,
-    spaceBetween: 20,
+    spaceBetween: 10,
     loop: true,
     modules: [Navigation],
 
@@ -90,7 +90,7 @@ else{
         <div className={`${styles.sliderTitle} ${styles.sliderTitleMedia}`}>
           Хиты продаж
         </div>
-        <div className={styles.cardsList}>
+        {/* <div className={styles.{allSlides ? "cardsList":"cardListAll"}}> */}
           <Swiper
             {...params}
             className={`${styles.sliderSwiper} ${styles.sliderSwiperMedia}`}
@@ -115,7 +115,7 @@ else{
             className={styles.arrowsButtonsBlock}
           /> */}
           </Swiper>
-        </div>
+        {/* </div> */}
 
         <div className={styles.slideMoveButtons}>
           <div className={styles.arrowsButtonsBlock}>
