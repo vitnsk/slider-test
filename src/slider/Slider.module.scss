@@ -23,7 +23,6 @@
 
 .sliderSwiper {
   margin-left: 0;
-
 }
 
 .sliderSwiperMedia {
@@ -50,6 +49,8 @@ display: none;
   overflow: auto;
   gap:10px
 }
+
+
 @media screen and (min-width: 480px) {
   .sliderSwiperMedia {
     width: 480px;
